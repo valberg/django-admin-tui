@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "django-admin-tui"
+dynamic = ["version"]
+description = 'Django Admin in the terminal.'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Víðir Valberg Guðmundsson", email = "valberg@orn.li" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+  "Django>=4.2",
+  "textual>=0.79"
+]
+
+[project.urls]
+Documentation = "https://github.com/valberg/django-admin-tui#readme"
+Issues = "https://github.com/valberg/django-admin-tui/issues"
+Source = "https://github.com/valberg/django-admin-tui"
+
+[tool.hatch.version]
+path = "django_admin_tui/__about__.py"
+
+[tool.ruff]
+target-version = "py39"
+extend-exclude = [
+  ".git",
+  "__pycache__",
+  "manage.py",
+  "asgi.py",
+  "wsgi.py",
+]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "G004", # Logging statement uses f-string
+  "ANN101", # Missing type annotation for `self` in method
+  "ANN102", # Missing type annotation for `cls` in classmethod
+  "EM101", # Exception must not use a string literal, assign to variable first
+  "EM102", # Exception must not use a f-string literal, assign to variable first
+  "COM812", # missing-trailing-comma (https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules)
+  "ISC001", # single-line-implicit-string-concatenation (https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules)
+  "D105", # Missing docstring in magic method
+  "D106", # Missing docstring in public nested class
+  "FIX", # TODO, FIXME, XXX
+  "TD", # TODO, FIXME, XXX
+  "D104", # Missing docstring in public package
+  "D107", # Missing docstring in __init__
+  "ANN002", # Missing type annotation for `*args`
+  "ANN003", # Missing type annotation for `**kwargs`
+  "SLF001", # Access to a protected member
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.ruff.lint.per-file-ignores]
+"tests.py" = [
+  "S101",  # Use of assert
+  "SLF001",  # Private member access
+  "D100", # Docstrings
+  "D103", # Docstrings
+]

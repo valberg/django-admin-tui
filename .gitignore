@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.sw*
+db.sqlite3
+.pytest_cache
+.idea/
+*.mo
+.env
+venv/
+.venv/
+
+
+# collectstatic
+src/static/
