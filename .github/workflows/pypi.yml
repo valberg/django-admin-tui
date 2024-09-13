@@ -58,7 +58,7 @@ jobs:
     name: "PyPI: Publish 🚀"
     needs:
     - build
-    - publish-to-testpypi
+#    - publish-to-testpypi
     runs-on: ubuntu-latest
     environment:
       name: pypi
