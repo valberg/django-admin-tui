@@ -10,6 +10,7 @@
 - [About](#about)
 - [Installation](#installation)
 - [License](#license)
+- [Inspiration](#inspiration)
 
 ## About
 
@@ -25,3 +26,7 @@ pip install django-admin-tui
 ## License
 
 `django-admin-tui` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+## Inspiration 
+
+Besides the Django admin and textual, [http://github.com/anze3db/django-tui](http://github.com/anze3db/django-tui) was the whole reason for the idea of this project.
