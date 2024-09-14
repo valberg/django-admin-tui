@@ -9,6 +9,7 @@
 
 - [About](#about)
 - [Installation](#installation)
+- [Usage](#usage)
 - [License](#license)
 - [Inspiration](#inspiration)
 
@@ -17,11 +18,17 @@
 `django-admin-tui` is a project aiming to render the Django admin in a text-based user interface (TUI)
 using [Textual](https://textual.textualize.io/), bringing one of Djangos killer features to a terminal near you.
 
-## Installation
+## Installation and setup
 
 ```console
 pip install django-admin-tui
 ```
+
+Then add `django_admin_tui` to your `INSTALLED_APPS`.
+
+## Usage
+
+Simply run `./manage.py admin_tui` and see all your registered admins right there in your terminal.
 
 ## License
 
